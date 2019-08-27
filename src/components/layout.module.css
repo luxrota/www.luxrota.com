@@ -1,0 +1,105 @@
+@import '_variables.css';
+@import-normalize;
+
+
+/**
+ * Global Styles
+ */
+
+:global :root {
+  background-color: var(--color-site-white);
+}
+
+
+/**
+ * Layout Styles
+ */
+
+/* layout */
+.layout {
+  font-family: 'Quattrocento Sans', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.025rem;
+  display: flex;
+  flex-direction: column;
+
+  @media (--device-laptop) {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* header */
+.header {
+  margin-left: auto;
+  margin-right: auto;
+  /* padding-left: 0.5rem; */
+  width: 100%;
+
+  @media (--device-mobile-wide) {
+    max-width: var(--measure);
+    padding-left: 0;
+  }
+  @media (--device-tablet-tall) {
+    max-width: 39rem;
+  }
+  @media (--device-tablet-wide) {
+    max-width: 49rem;
+  }
+  @media (--device-laptop) {
+    margin-left: inherit;
+    margin-right: inherit;
+    max-width: 18rem;
+    word-spacing: 100vw;  /* wrap every word */
+  }
+}
+
+/* content */
+.content {
+  margin-bottom: 8rem;
+  width: 100%;
+
+  @media (--device-tablet-tall) {
+    margin-left: auto;
+    margin-right: auto;
+    width: 39rem;
+  }
+  @media (--device-tablet-wide) {
+    width: 49rem;
+  }
+  @media (--device-laptop) {
+    margin-left: inherit;
+    margin-right: inherit;
+    margin-top: 1.666rem;
+    width: auto;
+  }
+}
+
+/* main */
+.main {
+  /* margin: 0.5rem; */
+}
+
+/* footer */
+.footer {
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (--device-mobile-wide) {
+    padding-right: 0.1rem;
+    max-width: var(--measure);
+  }
+  @media (--device-tablet-tall) {
+    margin-top: 2rem;
+    padding-right: 0.2rem;
+    max-width: 39rem;
+  }
+  @media (--device-tablet-wide) {
+    max-width: 49rem;
+  }
+  @media (--device-laptop) {
+    margin-top: 3rem;
+    max-width: 100%;
+  }
+}

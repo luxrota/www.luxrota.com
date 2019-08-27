@@ -1,0 +1,46 @@
+/**
+ * Variables
+ */
+:root {
+  --color-site-white: #fff;
+
+  /* type scale (font-size) */
+  --font-size-1: 2.5rem;
+  --font-size-2: 2rem;
+  --font-size-3: 1.5rem;
+  --font-size-4: 1.25rem;
+  --font-size-5: 1rem;
+  --font-size-6: 0.85rem;
+  --font-size-7: 0.7rem;
+
+  /* type line height (line-height) */
+  --line-height-solid: 1;
+  --line-height-title: 1.25;
+  --line-height-copy:  1.5;
+
+  /* type measure (max-width) */
+  --measure-narrow: 20em;  /* ~45 chars */
+  --measure:        30em;  /* ~66 chars */
+  --measure-wide:   34em;  /* ~80 chars */
+}
+
+/**
+ * Custom Media Query Breakpoints
+ *
+ *    30em   = 480px
+ *    35.5em = 568px
+ *    40em   = 640px
+ *    50em   = 800px
+ *    60em   = 960px
+ *    70em   = 1120px
+ *    80em   = 1280px
+ *    100em  = 1600px
+ */
+@custom-media --device-mobile-tall  (max-width: 30em);
+@custom-media --device-mobile-wide  (min-width: 30em);
+@custom-media --device-tablet-tall  (min-width: 40em);
+@custom-media --device-tablet-wide  (min-width: 50em);
+@custom-media --device-laptop       (min-width: 60em);
+@custom-media --device-desktop      (min-width: 70em);
+@custom-media --device-desktop-wide (min-width: 80em);
+@custom-media --device-desktop-huge (min-width: 100em);

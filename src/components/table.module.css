@@ -1,0 +1,10 @@
+.table {
+  /* composes: bt from 'tachyons';
+  composes: bw1 from 'tachyons';
+  composes: center from 'tachyons';
+  composes: collapse from 'tachyons'; */
+  /* composes: f6 from 'tachyons'; */
+}
+.table + small {
+  border: 1px solid red;
+}

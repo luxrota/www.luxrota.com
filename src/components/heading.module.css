@@ -1,0 +1,20 @@
+@import '_variables.css';
+
+
+.heading {
+  font-family: Lustria, serif;
+  font-weight: 400;
+  line-height: var(--line-height-title);
+}
+
+.h1 {
+  @media (--device-mobile-tall), (--device-mobile-wide) {
+    font-size: var(--font-size-3);
+  }
+  @media (--device-tablet-tall), (--device-tablet-wide) {
+    font-size: var(--font-size-2);
+  }
+  @media (--device-laptop) {
+    font-size: var(--font-size-1);
+  }
+}

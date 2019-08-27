@@ -1,0 +1,22 @@
+@import '_variables.css';
+
+
+.aside {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+
+  @media (--device-mobile-wide) {
+    width: 29.8em;
+  }
+  @media (--device-tablet-tall) {
+    padding-left: 1rem;
+    width: 17em;
+  }
+  @media (--device-laptop) {
+    padding-left: 2rem;
+  }
+  @media (--device-desktop-huge) {
+    width: 25em;
+  }
+}

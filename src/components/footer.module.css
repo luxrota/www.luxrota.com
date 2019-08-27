@@ -1,0 +1,42 @@
+@import '_variables.css';
+
+
+/**
+ * Footer
+ */
+
+/* footer */
+.footer {
+  background-color: var(--color-site-white);
+  text-align: right;
+  width: 100%;
+}
+
+/* legal */
+.legal {
+  font-size: var(--font-size-7);
+  color: gray;
+}
+
+/* brand */
+.brand {
+  color: black;
+}
+
+/* link */
+.link {
+  color: var(--color-site-white);
+  text-decoration: none;
+}
+
+/* logo */
+.logo {
+  width: 10rem;
+
+  @media (--device-tablet-tall), (--device-tablet-wide) {
+    width: 12.5rem;
+  }
+  @media (--device-laptop) {
+    width: 15rem;
+  }
+}

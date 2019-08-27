@@ -1,0 +1,9 @@
+@import '_variables.css';
+
+
+.paragraph {
+  margin-top: 0;
+  padding: 0;
+  line-height: var(--line-height-copy);
+  max-width: var(--measure-wide);
+}
