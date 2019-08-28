@@ -1,5 +1,5 @@
 ---
-title: "SimHash Distributed Scalar Encoder (SHaDSE)"
+title: "SimHash Scalar Encoder"
 date: "2019-04-18"
 ---
 
@@ -26,7 +26,7 @@ bucket space. A stable number of On bits (`w`) is achieved during final
 collapsing step of SimHashing.
 
 
-### Scalar Encoder Feature Comparison
+## Scalar Encoder Feature Comparison
 
 | | Original<br/>Scalar | Random<br/>Distributed | SimHash<br/>Distributed |
 |---|---|---|---|---|
@@ -44,7 +44,7 @@ collapsing step of SimHashing.
 </small>
 
 
-### Scalar Encoder Performance Comparison
+## Scalar Encoder Performance Comparison
 
 Tests were run against the simple model presented in the
 [NuPIC Docs Algo Tutorial][tutor]. The usual "HotGym"
@@ -72,9 +72,9 @@ Any changes to Encoder settings are noted below.
 </small>
 
 
-### How It Works
+## How It Works
 
-##### Step 1 - Input some scalar values:
+### Step 1 - Input some scalar values:
 
 | Time | Input |
 | --- | --- |
@@ -85,7 +85,7 @@ Any changes to Encoder settings are noted below.
 | 4 | 7.6  |
 | 5 | 22.9 |
 
-##### Step 2 - Map inputs to buckets:
+### Step 2 - Map inputs to buckets:
 
 Map input values to bucket indexes, using the
 [formula from the RDSE][bucket].
@@ -107,7 +107,7 @@ Map input values to bucket indexes, using the
 | 7.6  | 1 |
 | 22.9 | 4 |
 
-##### Step 3 - Hash bucket index
+### Step 3 - Hash bucket index
 
 Hash bucket index value of a target bucket (**3**), and
 neighbors (`bucketRadius`=2).
@@ -120,7 +120,7 @@ neighbors (`bucketRadius`=2).
 | 4 | 00011011 |
 | 5 | 10101100 |
 
-##### Step 4 - Convert binary 0's in hashes to integer -1:
+### Step 4 - Convert binary 0's in hashes to integer -1:
 
 | Bucket | Hash Columns |
 | --- | --- |
@@ -130,7 +130,7 @@ neighbors (`bucketRadius`=2).
 | 4 | -1 -1 -1 +1 +1 -1 +1 +1 |
 | 5 | +1 -1 +1 -1 +1 +1 -1 -1 |
 
-##### Step 5 - Weight bucket hashes:
+### Step 5 - Weight bucket hashes:
 
 Weight bucket hashes. The target bucket (**3**) in center of
 `bucketRadius` is heaviest.
@@ -143,13 +143,13 @@ Weight bucket hashes. The target bucket (**3**) in center of
 | 4 | 2 | -2 -2 -2 +2 +2 -2 +2 +2 |
 | 5 | 1 | +1 -1 +1 -1 +1 +1 -1 -1 |
 
-##### Step 6 - Sum weighted binary columns:
+### Step 6 - Sum weighted binary columns:
 
 | Bucket | Hash Column Summations |
 | --- | --- |
 | **3** | **-3 1 1 7 1 1 5 3** |
 
-##### Step 7 - Collapse integer sums back to binary:
+### Step 7 - Collapse integer sums back to binary:
 
 Collapse the sums back to binary for a final SimHash value for our
 target bucket (**3**).
@@ -170,13 +170,13 @@ target bucket, **and** the relation of our target bucket to it's
 near neighbors (descending outward with `bucketRadius`).
 
 
-### Source Code
+## Source Code
 
 * [Pull Request against Old NuPIC][pr].
 * [Research Repo][repo] with my test runners and original research code.
 
 
-### Next Steps
+## Next Steps
 
 * Create C++ version for Community NuPIC.cpp (I plan on doing this).
 * Find a way to lower and stabilize the average Hamming distance
@@ -193,7 +193,7 @@ near neighbors (descending outward with `bucketRadius`).
   related to how the neocortex encodes and pools.
 
 
-### Learn More
+## Learn More
 
 * [HTM Community Discussion][disc]
 * [SimHash Document Encoder][shadde]
@@ -226,4 +226,3 @@ near neighbors (descending outward with `bucketRadius`).
 [vidschool]: https://www.youtube.com/watch?v=V3Yqtpytif0&list=PL3yXMgtrZmDqhsFQzwUC9V8MeeVOQ7eZ9&index=7&t=0s
 [vidsim]: https://www.youtube.com/watch?v=gnraT4N43qo
 [vidlsh]: https://www.youtube.com/watch?v=dgH0NP8Qxa8
-

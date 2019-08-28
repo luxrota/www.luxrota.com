@@ -1,3 +1,7 @@
+@import '_variables.css';
+
+
 .listItem {
-  color: black;
+  line-height: var(--line-height-copy);
+  max-width: var(--measure-wide);
 }

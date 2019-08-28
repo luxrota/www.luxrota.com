@@ -1,0 +1,13 @@
+@import '_variables.css';
+
+
+.preformat {
+  background-color: #eee;
+  color: #333;
+  font-size: var(--font-size-5);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--measure);
+  padding: 1rem 0.5rem;
+  width: 100%;
+}

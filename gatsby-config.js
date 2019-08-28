@@ -6,20 +6,29 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: 'gatsby-plugin-google-gtag',
+      options: {
+        trackingIds: ['UA-146603953-1'],
+        pluginConfig: {
+          head: true,
+        },
+      },
+    },
+    {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'www.luxrota.com',
+        short_name: 'luxrota',
         start_url: '/',
         background_color: '#663399',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'src/images/luxrota.svg', // relative to site root
+        icon: 'src/images/luxrota.svg',
       },
     },
     // 'gatsby-plugin-offline',
     {
-      resolve: `gatsby-plugin-postcss`,
+      resolve: 'gatsby-plugin-postcss',
       options: {
         postCssPlugins: [
           // ordered
@@ -57,14 +66,14 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: `${__dirname}/src/images`,
+        path: 'src/images/',
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'pages',
-        path: `${__dirname}/src/pages`,
+        path: 'src/pages/',
       },
     },
     'gatsby-transformer-remark',

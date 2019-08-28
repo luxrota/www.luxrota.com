@@ -1,5 +1,5 @@
 ---
-title: "SimHash Distributed Document Encoder (SHaDDE)"
+title: "SimHash Document Encoder"
 date: "2019-04-23"
 ---
 
@@ -66,4 +66,3 @@ linguistic semantic understanding.  You'll want http://cortical.io for that.
 [vidschool]: https://www.youtube.com/watch?v=V3Yqtpytif0&list=PL3yXMgtrZmDqhsFQzwUC9V8MeeVOQ7eZ9&index=7&t=0s
 [vidlsh]: https://www.youtube.com/watch?v=dgH0NP8Qxa8
 [vidsim]: https://www.youtube.com/watch?v=gnraT4N43qo
-

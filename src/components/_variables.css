@@ -4,13 +4,17 @@
 :root {
   --color-site-white: #fff;
 
+  /* type font (font-family) */
+  --font-copy:  'Quattrocento Sans', sans-serif;
+  --font-title: Lustria, serif;
+
   /* type scale (font-size) */
   --font-size-1: 2.5rem;
   --font-size-2: 2rem;
   --font-size-3: 1.5rem;
   --font-size-4: 1.25rem;
   --font-size-5: 1rem;
-  --font-size-6: 0.85rem;
+  --font-size-6: 0.875rem;
   --font-size-7: 0.7rem;
 
   /* type line height (line-height) */

@@ -2,12 +2,14 @@
 
 
 .heading {
-  font-family: Lustria, serif;
-  font-weight: 400;
+  font-family: var(--font-title);
+  font-weight: normal;
   line-height: var(--line-height-title);
 }
 
 .h1 {
+  font-family: var(--font-title);
+
   @media (--device-mobile-tall), (--device-mobile-wide) {
     font-size: var(--font-size-3);
   }
@@ -16,5 +18,28 @@
   }
   @media (--device-laptop) {
     font-size: var(--font-size-1);
+  }
+}
+.h2 {
+  font-family: var(--font-title);
+
+  @media (--device-mobile-tall), (--device-mobile-wide) {
+    font-size: var(--font-size-4);
+    font-weight: bold;
+  }
+  @media (--device-tablet-tall), (--device-tablet-wide), (--device-laptop) {
+    font-size: var(--font-size-3);
+    font-weight: normal;
+  }
+}
+.h3 {
+  font-family: var(--font-copy);
+  font-weight: bold;
+
+  @media (--device-mobile-tall), (--device-mobile-wide) {
+    font-size: var(--font-size-5);
+  }
+  @media (--device-tablet-tall), (--device-tablet-wide), (--device-laptop) {
+    font-size: var(--font-size-4);
   }
 }

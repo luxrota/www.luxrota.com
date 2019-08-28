@@ -1,5 +1,10 @@
+@import '_variables.css';
+
+
 .tableHeading {
-  /* composes: b from 'tachyons';
-  composes: bgWhite from 'tachyons';
-  composes: pa2 from 'tachyons'; */
+  background-color: #eee;
+  border-top: 2px solid #666;
+  border-bottom: 2px solid #666;
+  font-weight: bold;
+  padding: 0.25rem 0.5rem;
 }
