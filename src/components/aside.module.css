@@ -16,7 +16,7 @@
   @media (--device-laptop) {
     padding-left: 2rem;
   }
-  @media (--device-desktop-huge) {
+  @media (--device-desktop-full) {
     width: 25em;
   }
 }

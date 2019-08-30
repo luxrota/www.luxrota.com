@@ -47,4 +47,4 @@
 @custom-media --device-laptop       (min-width: 60em);
 @custom-media --device-desktop      (min-width: 70em);
 @custom-media --device-desktop-wide (min-width: 80em);
-@custom-media --device-desktop-huge (min-width: 100em);
+@custom-media --device-desktop-full (min-width: 100em);

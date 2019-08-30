@@ -2,7 +2,6 @@ import {graphql, Link} from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
 
-import Heading from '../components/heading'
 import Layout from '../components/layout'
 import Paragraph from '../components/paragraph'
 import SEO from '../components/seo'

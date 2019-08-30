@@ -17,15 +17,33 @@
 
 /* layout */
 .layout {
-  font-family: var(--font-copy);
-  font-weight: normal;
-  letter-spacing: 0.025rem;
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
+  font-family: var(--font-copy);
+  font-weight: normal;
+  letter-spacing: 0.02rem;
+  margin-top: 1rem;
 
+  @media (--device-tablet-tall) {
+    margin-top: 1.5rem;
+  }
+  @media (--device-tablet-wide) {
+    margin-top: 2rem;
+  }
   @media (--device-laptop) {
     flex-direction: row;
     justify-content: center;
+    margin-top: 2.5rem;
+  }
+  @media (--device-desktop) {
+    margin-top: 3rem;
+  }
+  @media (--device-desktop-wide) {
+    margin-top: 3.5rem;
+  }
+  @media (--device-desktop-full) {
+    margin-top: 4rem;
   }
 }
 
@@ -33,23 +51,21 @@
 .header {
   margin-left: auto;
   margin-right: auto;
-  /* padding-left: 0.5rem; */
   width: 100%;
 
   @media (--device-mobile-wide) {
-    max-width: var(--measure);
-    padding-left: 0;
+    width: var(--measure);
   }
   @media (--device-tablet-tall) {
-    max-width: 39rem;
+    width: 39rem;
   }
   @media (--device-tablet-wide) {
-    max-width: 49rem;
+    width: 49rem;
   }
   @media (--device-laptop) {
     margin-left: inherit;
     margin-right: inherit;
-    max-width: 18rem;
+    width: 18rem;
     word-spacing: 100vw;  /* wrap every word */
   }
 }
@@ -59,9 +75,12 @@
   margin-bottom: 8rem;
   width: 100%;
 
-  @media (--device-tablet-tall) {
+  @media (--device-mobile-wide) {
     margin-left: auto;
     margin-right: auto;
+    width: var(--measure);
+  }
+  @media (--device-tablet-tall) {
     width: 39rem;
   }
   @media (--device-tablet-wide) {
@@ -70,7 +89,6 @@
   @media (--device-laptop) {
     margin-left: inherit;
     margin-right: inherit;
-    margin-top: 1.666rem;
     width: auto;
   }
 }
@@ -82,24 +100,24 @@
 
 /* footer */
 .footer {
-  margin-top: 1rem;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 1rem;
 
   @media (--device-mobile-wide) {
     padding-right: 0.1rem;
-    max-width: var(--measure);
+    width: var(--measure);
   }
   @media (--device-tablet-tall) {
     margin-top: 2rem;
+    width: 39rem;
     padding-right: 0.2rem;
-    max-width: 39rem;
   }
   @media (--device-tablet-wide) {
-    max-width: 49rem;
+    width: 49rem;
   }
   @media (--device-laptop) {
     margin-top: 3rem;
-    max-width: 100%;
+    width: 100%;
   }
 }

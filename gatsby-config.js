@@ -39,7 +39,7 @@ module.exports = {
           require('postcss-at2x')(),
           require('postcss-css-variables')(),
           require('postcss-custom-media')(),
-          require('postcss-normalize')({ browsers: 'last 2 versions' }),
+          require('postcss-normalize')(),
           require('stylelint')({ configFile: '.stylelintrc' }),
         ],
       },
@@ -55,9 +55,9 @@ module.exports = {
           {
             family: 'Lustria',
             variants: ['400'],
-          }
-        ]
-      }
+          },
+        ],
+      },
     },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-remove-trailing-slashes',
@@ -76,7 +76,25 @@ module.exports = {
         path: 'src/pages/',
       },
     },
-    'gatsby-transformer-remark',
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          'gatsby-remark-abbr',
+          'gatsby-remark-autolink-headers',
+          'gatsby-remark-check-links',
+          'gatsby-remark-containers',
+          'gatsby-remark-emoji-unicode',
+          'gatsby-remark-graphviz',
+          'gatsby-remark-highlight.js',
+          'gatsby-remark-reading-time-v2',
+          'gatsby-remark-smartypants',
+          'gatsby-remark-sub-sup',
+          'gatsby-remark-unwrap-images',
+          'gatsby-remark-a11y-emoji',  // bottom
+        ]
+      }
+    },
     'gatsby-transformer-sharp',
-  ],
+  ]
 }

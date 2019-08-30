@@ -5,6 +5,7 @@
   font-family: var(--font-title);
   font-weight: normal;
   line-height: var(--line-height-title);
+  margin-top: 0;
 }
 
 .h1 {
