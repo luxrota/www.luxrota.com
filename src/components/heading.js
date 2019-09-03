@@ -1,19 +1,22 @@
-import classes from 'classnames'
+import classnames from 'classnames'
 import PropTypes from 'prop-types'
 import React from 'react'
 
 import styles from './heading.module.css'
 
-const Heading = ({children, level}) => {
+const Heading = ({children, id, level}) => {
   const HeadingTag = `h${level}`
   return (
-    <HeadingTag className={classes(styles.heading, styles[HeadingTag])}>
+    <HeadingTag id={id}
+                className={classnames(styles.heading, styles[HeadingTag])}
+                >
       {children}
     </HeadingTag>
   )
 }
 Heading.propTypes = {
   children: PropTypes.node.isRequired,
+  id: PropTypes.string,
   level: PropTypes.oneOf(1, 2, 3, 4, 5, 6),
 }
 Heading.defaultProps = {

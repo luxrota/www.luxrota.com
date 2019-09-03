@@ -1,39 +1,48 @@
-import hljs from 'highlight.js/lib/highlight'
-import hlpy from 'highlight.js/lib/languages/python'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
-import React, { createElement } from 'react'
+import React from 'react'
 import RehypeReact from 'rehype-react'
 
 import Article from '../components/article'
 import Aside from '../components/aside'
+import Code from '../components/code'
 import Heading from '../components/heading'
+import Image from '../components/image'
 import Layout from '../components/layout'
+import Link from '../components/link'
 import List from '../components/list'
 import ListItem from '../components/listItem'
 import Paragraph from '../components/paragraph'
 import Preformat from '../components/preformat'
 import Section from '../components/section'
+import SEO from '../components/seo'
 import Table from '../components/table'
 import TableCell from '../components/tableCell'
 import TableHeading from '../components/tableHeading'
 import TableRow from '../components/tableRow'
 
-import 'highlight.js/styles/solarized-light.css'
+import 'prismjs/themes/prism-solarizedlight.css'
 
 
 /* eslint-disable react/display-name, react/prop-types */
+// to convert markdown html => react components
+const createHeading = (props, level) => {
+  return React.createElement(Heading, {...props, level}, props.children)
+}
 const renderAst = new RehypeReact({
-  createElement,
+  createElement: React.createElement,
   components: {
+    a:        Link,
     article:  Article,
     aside:    Aside,
+    code:     Code,
     h1:       Heading,
-    h2:       (props) => createElement(Heading, {level: 2}, props.children),
-    h3:       (props) => createElement(Heading, {level: 3}, props.children),
-    h4:       (props) => createElement(Heading, {level: 4}, props.children),
-    h5:       (props) => createElement(Heading, {level: 5}, props.children),
-    h6:       (props) => createElement(Heading, {level: 6}, props.children),
+    h2:       (props) => createHeading(props, 2),
+    h3:       (props) => createHeading(props, 3),
+    h4:       (props) => createHeading(props, 4),
+    h5:       (props) => createHeading(props, 5),
+    h6:       (props) => createHeading(props, 6),
+    img:      Image,
     li:       ListItem,
     ol:       List,
     p:        Paragraph,
@@ -47,10 +56,6 @@ const renderAst = new RehypeReact({
   }
 }).Compiler
 /* eslint-enable react/display-name, react/prop-types */
-
-// markdown code snippet highlighting
-hljs.registerLanguage('python', hlpy);
-hljs.initHighlightingOnLoad();
 
 // template metadata query
 export const pageQuery = graphql`
@@ -73,23 +78,23 @@ export const pageQuery = graphql`
 
 
 /**
- * Article Template
+ * Markdown Template
  */
-const ArticleTemplate = ({data}) => {
+const MarkdownTemplate = ({data}) => {
   const {markdownRemark} = data
   const {fields, frontmatter, htmlAst} = markdownRemark
   return (
-    <Layout heading={frontmatter.title}>
-      <div>{frontmatter.date}</div>
-      <div>{fields.readingTime.text}</div>
-      <div>
-        {renderAst(htmlAst)}
-      </div>
+    <Layout date={frontmatter.date}
+            readtime={fields.readingTime.text}
+            title={frontmatter.title}
+            >
+      <SEO title={frontmatter.title} keywords={frontmatter.keywords} />
+      {renderAst(htmlAst)}
     </Layout>
   )
 }
-ArticleTemplate.propTypes = {
+MarkdownTemplate.propTypes = {
   data: PropTypes.object.isRequired,
 }
 
-export default ArticleTemplate
+export default MarkdownTemplate

@@ -10,25 +10,32 @@
 
 .h1 {
   font-family: var(--font-title);
+  font-size: 1.666rem;
 
-  @media (--device-mobile-tall), (--device-mobile-wide) {
-    font-size: var(--font-size-3);
+  @media (--device-tablet-tall),
+         (--device-tablet-wide) {
+    font-size: 1.777rem;
   }
-  @media (--device-tablet-tall), (--device-tablet-wide) {
-    font-size: var(--font-size-2);
+  @media (--device-laptop),
+         (--device-desktop) {
+    font-size: 2.222rem;
   }
-  @media (--device-laptop) {
-    font-size: var(--font-size-1);
+  @media (--device-desktop-full),
+         (--device-desktop-wide) {
+    font-size: 2.444rem;
   }
 }
 .h2 {
   font-family: var(--font-title);
 
-  @media (--device-mobile-tall), (--device-mobile-wide) {
+  @media (--device-mobile-tall),
+         (--device-mobile-wide) {
     font-size: var(--font-size-4);
     font-weight: bold;
   }
-  @media (--device-tablet-tall), (--device-tablet-wide), (--device-laptop) {
+  @media (--device-tablet-tall),
+         (--device-tablet-wide),
+         (--device-laptop) {
     font-size: var(--font-size-3);
     font-weight: normal;
   }
@@ -37,10 +44,13 @@
   font-family: var(--font-copy);
   font-weight: bold;
 
-  @media (--device-mobile-tall), (--device-mobile-wide) {
+  @media (--device-mobile-tall),
+         (--device-mobile-wide) {
     font-size: var(--font-size-5);
   }
-  @media (--device-tablet-tall), (--device-tablet-wide), (--device-laptop) {
+  @media (--device-tablet-tall),
+         (--device-tablet-wide),
+         (--device-laptop) {
     font-size: var(--font-size-4);
   }
 }

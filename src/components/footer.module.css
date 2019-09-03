@@ -33,10 +33,13 @@
 .logo {
   width: 10rem;
 
-  @media (--device-tablet-tall), (--device-tablet-wide) {
-    width: 12.5rem;
+  @media (--device-tablet-tall) {
+    width: 11rem;
   }
   @media (--device-laptop) {
-    width: 15rem;
+    width: 12rem;
+  }
+  @media (--device-desktop-wide) {
+    width: 14rem;
   }
 }

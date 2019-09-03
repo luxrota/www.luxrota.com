@@ -19,4 +19,8 @@
   @media (--device-desktop-full) {
     width: 25em;
   }
+
+  & > img {
+    padding-top: 0.333rem;
+  }
 }

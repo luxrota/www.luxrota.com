@@ -3,13 +3,12 @@ const path = require('path')
 
 
 /**
- *
- *  - create article posts from markdown files
+ * Create pages from markdown files.
  */
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
-  const articleTemplate = path.resolve(`src/templates/article.js`)
-  const articleQuery = `
+  const template = path.resolve(`src/templates/markdown.js`)
+  const query = `
     {
       allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
@@ -25,14 +24,14 @@ exports.createPages = ({ actions, graphql }) => {
       }
     }
   `
-  return graphql(articleQuery).then(result => {
+  return graphql(query).then(result => {
     if (result.errors) {
       return Promise.reject(result.errors)
     }
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
         path: node.fields.slug,
-        component: articleTemplate,
+        component: template,
         context: {}, // additional data can be passed via context
       })
     })
@@ -40,8 +39,7 @@ exports.createPages = ({ actions, graphql }) => {
 }
 
 /**
- *
- *  - add url slugs to markdown articles
+ *  Add url slugs to markdown pages.
  */
 exports.onCreateNode = ({node, getNode, actions}) => {
   const {createNodeField} = actions
@@ -61,4 +59,3 @@ exports.onCreateNode = ({node, getNode, actions}) => {
     })
   }
 }
-

@@ -22,28 +22,28 @@
   flex-direction: column;
   font-family: var(--font-copy);
   font-weight: normal;
-  letter-spacing: 0.02rem;
-  margin-top: 1rem;
+  letter-spacing: 0.015rem;
+  margin: 1.5rem 0;
 
   @media (--device-tablet-tall) {
-    margin-top: 1.5rem;
+    margin: 2rem 0;
   }
   @media (--device-tablet-wide) {
-    margin-top: 2rem;
+    margin: 2.5rem 0;
   }
   @media (--device-laptop) {
     flex-direction: row;
     justify-content: center;
-    margin-top: 2.5rem;
+    margin: 3rem 0;
   }
   @media (--device-desktop) {
-    margin-top: 3rem;
+    margin: 3.5rem 0;
   }
   @media (--device-desktop-wide) {
-    margin-top: 3.5rem;
+    margin: 4rem 0;
   }
   @media (--device-desktop-full) {
-    margin-top: 4rem;
+    margin: 4.5rem 0;
   }
 }
 
@@ -63,16 +63,23 @@
     width: 49rem;
   }
   @media (--device-laptop) {
+    hyphens: auto;
     margin-left: inherit;
     margin-right: inherit;
-    width: 18rem;
-    word-spacing: 100vw;  /* wrap every word */
+    overflow-wrap: break-word;
+    /* text-align: right; */
+    width: 14rem;
+    word-break: break-word;
+    word-spacing: 100vw; /* force wrap every word */
+    word-wrap: break-word;
+  }
+  @media (--device-desktop-wide) {
+    width: 15.5rem;
   }
 }
 
 /* content */
 .content {
-  margin-bottom: 8rem;
   width: 100%;
 
   @media (--device-mobile-wide) {
@@ -87,9 +94,12 @@
     width: 49rem;
   }
   @media (--device-laptop) {
-    margin-left: inherit;
+    margin-left: 2.5rem;
     margin-right: inherit;
     width: auto;
+  }
+  @media (--device-desktop-wide) {
+    margin-left: 2.75rem;
   }
 }
 

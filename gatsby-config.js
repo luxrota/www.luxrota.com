@@ -81,12 +81,13 @@ module.exports = {
       options: {
         plugins: [
           'gatsby-remark-abbr',
-          'gatsby-remark-autolink-headers',
           'gatsby-remark-check-links',
           'gatsby-remark-containers',
+          'gatsby-remark-copy-images',
           'gatsby-remark-emoji-unicode',
+          'gatsby-remark-heading-slug',
           'gatsby-remark-graphviz',
-          'gatsby-remark-highlight.js',
+          'gatsby-remark-prismjs',
           'gatsby-remark-reading-time-v2',
           'gatsby-remark-smartypants',
           'gatsby-remark-sub-sup',

@@ -21,13 +21,15 @@ const query = graphql`{
 /**
  * Layout
  */
-const Layout = ({children, heading}) => (
+const Layout = ({children, date, readtime, title}) => (
   <StaticQuery
     query={query}
     render={(data) => (
       <div className={styles.layout}>
         <div className={styles.header}>
-          <Header heading={heading} />
+          <Header heading={title} />
+          {date}<br />
+          {readtime}
         </div>
         <div className={styles.content}>
           <main className={styles.main}>
@@ -43,7 +45,9 @@ const Layout = ({children, heading}) => (
 )
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  heading: PropTypes.string.isRequired,
+  date: PropTypes.object,
+  readtime: PropTypes.string,
+  title: PropTypes.string.isRequired,
 }
 
 export default Layout

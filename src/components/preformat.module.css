@@ -2,9 +2,6 @@
 
 
 .preformat {
-  font-size: var(--font-size-6);
-  margin-left: auto;
-  margin-right: auto;
+  font-size: var(--font-size-6) !important;
   max-width: var(--measure-wide);
-  width: 100%;
 }
