@@ -1,17 +1,19 @@
 ---
-date: 2019-04-23
-title: SimHash Document Encoder
-image: image.png
-keywords: simhash, document, encoder
+date: "2019-04-23"
+title: "SimHash Document Encoder"
+image: "image.png"
+keywords: "simhash, document, encoder"
 ---
 
 ::: section
 
 ::: article
-The SimHash Document Encoder is now live in [htm.core][htmcore], for both C++
-and Python. It provides simple and immediate encoding of text for use with
-[Hierarchical Temporal Memory][htm] (HTM). This may be of interest to Natural
-Language Processing (NLP), Search, or HTM engineers.
+
+The **SimHash Document Encoder** is [now live][encoder-cpp] in
+[HTM.core][htm-core] as C++ with Python bindings. It provides simple and
+immediate encoding of text for use with [Hierarchical Temporal Memory][htm]
+(HTM). This may be of interest to Natural Language Processing (NLP), Search,
+or HTM engineers.
 
 The SimHash Document Encoder converts text-based documents into
 [Sparse Distributed Representations][sdr] (SDR), ready for use with HTM.
@@ -28,6 +30,14 @@ similarity (encodings for "apple" and "computer" will have no relation here).
 :::
 
 ## Usage
+
+Install [HTM.core][htm-core] before trying the examples below.
+
+A wide selection of helpful parameters can be passed to the encoder, setting
+options regarding token case sensitivity, vocabulary and weightings,
+exclusions, orphan handling, frequency ceiling/flooring, and character
+similarity sensitivity. The [documentation in the header file][encoder-cpp]
+has more details.
 
 ### C++
 
@@ -46,6 +56,8 @@ encoder.encode({ "bravo", "delta", "echo" }, output);
 encoder.encode("bravo delta echo", output);  // same
 ```
 
+The [C++ Unit Tests][encoder-cpp-test] provide more usage examples.
+
 ### Python
 
 ```python
@@ -63,35 +75,34 @@ other = encoder.encode([ "bravo", "delta", "echo" ])
 other = encoder.encode("bravo delta echo")  # same
 ```
 
+The [Python Unit Tests][encoder-py-test] provide more usage information.
+
 #### Python Example Runner
 
-Generate a bunch of random documents, and find the most/least similar. Also,
-generate charts of the entire encoding space.
+This will generate many random documents, and find the most/least similar.
+Also, it will generate a chart of the entire encoding space. Parameter help
+and usage is provided.
+
+For help getting started:
 
 ```bash
-python -m htm.examples.encoders.simhash_document_encoder --help
+python \
+  -m htm.examples.encoders.simhash_document_encoder \
+  --help
 ```
 
-Example output:
+To run a simple example:
 
 ```bash
-Statistics:
-	Encoded 1000 Document inputs.
-	Output: SDR( 400 )
-    Sparsity Min/Mean/Std/Max 0.11 / 0.11 / 5.07831e-07 / 0.11
-    Activation Frequency Min/Mean/Std/Max 0.011 / 0.11 / 0.0696577 / 0.483
-    Entropy 0.935725
-    Overlap Min/Mean/Std/Max 0 / 0.151834 / 0.061668 / 0.386364
-Similarity:
-	Reference:
-		['also', 'high', 'low', 'mean', 'part', 'tell', 'try', 'where', 'world']
-	MOST Similar (Distance = 54):
-		['differ', 'here', 'high', 'low', 'off', 'off', 'tell', 'try', 'where']
-	LEAST Similar (Distance = 88):
-		['add', 'ask', 'came', 'even', 'give', 'name', 'very', 'well', 'why']
+python \
+  -m htm.examples.encoders.simhash_document_encoder \
+  --size 400 \
+  --activeBits 150
 ```
 
 #### Python Module Help
+
+This provides helpful documentation on encoder parameters and usage.
 
 ```bash
 python
@@ -101,48 +112,50 @@ python
 
 ## Learn More
 
-### File Links  
-
-  - Encoder README
-  - Headers: C++
-  - Source: C++, Python
-  - Tests: C++, Python
-
 ### SimHash
 
 [SimHash][simhash] is a [Locality-Sensitive Hashing][lsh] (LSH) algorithm from
 the world of nearest-neighbor document similarity search. It is used by the
 GoogleBot Web Crawler to find near-duplicate web pages.
 
-link README
+We provide an [encoder-specific README][encoder-readme] file for an in-depth
+tour of the SimHash algorithm.
 
 ### HTM.core
 
-[HTM.core][htmcore] is the active [HTM Community][htmcommunity] fork of
+[HTM.core][htm-core] is the active [HTM Community][htm-community] fork of
 [Numenta][numenta]'s hibernating [NuPIC][nupic] HTM codebase. Thanks again to
 @breznak, @dmac, and @dkeeney from the team for their help and support, they've
-got a beautiful codebase going.
+got a beautiful codebase going, and are wonderful to work with.
 
 ### Semantic Similarity
 
-For similar encodings that support *semantic* similarity (encodings for
+For encodings that support *semantic* similarity (encodings for
 "apple" and "computer" will relate), [Cortical.io][cortical-io] offers their
 highly recommended Semantic Folding technology.
+
+thanks!
+
+([permalink][lvx-simhash-document])
 
 *[HTM]: Hierarchical Temporal Memory
 *[LSH]: Locality-Sensitive Hashing
 *[NLP]: Natural Language Processing
+*[NuPIC]: Numenta Platform for Intelligent Computing
 *[SDR]: Sparse Distributed Representation
 
 [cortical-io]: https://cortical.io
+[encoder-cpp]: https://github.com/htm-community/htm.core/blob/master/src/htm/encoders/SimHashDocumentEncoder.hpp
+[encoder-cpp-test]: https://github.com/htm-community/htm.core/blob/master/src/test/unit/encoders/SimHashDocumentEncoderTest.cpp
+[encoder-readme]: https://github.com/htm-community/htm.core/blob/master/src/htm/encoders/SimHashDocumentEncoder.README.md
+[encoder-py]: https://github.com/htm-community/htm.core/blob/master/bindings/py/cpp_src/bindings/encoders/py_SimHashDocumentEncoder.cpp
+[encoder-py-test]: https://github.com/htm-community/htm.core/blob/master/bindings/py/tests/encoders/simhash_document_encoder_test.py
 [htm]: https://numenta.com/machine-intelligence-technology/
+[htm-community]: https://discourse.numenta.org/
 [htm-core]: https://github.com/htm-community/htm.core#readme
 [lsh]: https://en.wikipedia.org/wiki/Locality-sensitive_hashing
+[lvx-simhash-document]: https://luxrota.com/simhash-document-encoder
 [numenta]: https://numenta.com
+[nupic]: https://github.com/numenta/nupic#readme
 [sdr]: https://numenta.com/neuroscience-research/sparse-distributed-representations/
 [simhash]: https://en.wikipedia.org/wiki/SimHash
-[simhash-cpp]: https://github.com/htm-community/htm.core/blob/master/src/htm/encoders/SimHashDocumentEncoder.hpp
-[simhash-cpp-test]: https://
-[simhash-py]: https://github.com/htm-community/htm.core/blob/master/bindings/py/cpp_src/bindings/encoders/py_SimHashDocumentEncoder.cpp
-[simhash-py-test]: https://
-[simhash-readme]: https://github.com/htm-community/htm.core/blob/master/src/htm/encoders/SimHashDocumentEncoder.README.md

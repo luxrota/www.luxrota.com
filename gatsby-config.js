@@ -49,12 +49,12 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: 'Quattrocento Sans',
+            family: 'Lustria',
             variants: ['400'],
           },
           {
-            family: 'Lustria',
-            variants: ['400'],
+            family: 'Quattrocento Sans',
+            variants: ['400', '700'],
           },
         ],
       },
@@ -87,7 +87,7 @@ module.exports = {
           'gatsby-remark-emoji-unicode',
           'gatsby-remark-heading-slug',
           'gatsby-remark-graphviz',
-          'gatsby-remark-prismjs',
+          'gatsby-remark-highlight.js',
           'gatsby-remark-reading-time-v2',
           'gatsby-remark-smartypants',
           'gatsby-remark-sub-sup',

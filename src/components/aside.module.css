@@ -21,6 +21,7 @@
   }
 
   & > img {
+    filter: saturate(0);
     padding-top: 0.333rem;
   }
 }

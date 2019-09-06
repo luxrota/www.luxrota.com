@@ -1,4 +1,5 @@
-import {graphql, StaticQuery} from 'gatsby'
+import { graphql, StaticQuery } from 'gatsby'
+import { Location } from '@reach/router' 
 import PropTypes from 'prop-types'
 import React from 'react'
 
@@ -28,8 +29,16 @@ const Layout = ({children, date, readtime, title}) => (
       <div className={styles.layout}>
         <div className={styles.header}>
           <Header heading={title} />
-          {date}<br />
-          {readtime}
+          <Location>
+            {({location}) => {
+              if (location.pathname != '/') {
+                return (<div>
+                  {date}<br />
+                  {readtime}
+                </div>)
+              }
+            }}
+          </Location>
         </div>
         <div className={styles.content}>
           <main className={styles.main}>

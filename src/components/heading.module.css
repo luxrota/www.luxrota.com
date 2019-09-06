@@ -2,8 +2,8 @@
 
 
 .heading {
-  font-family: var(--font-title);
-  font-weight: normal;
+  font-family: var(--font-copy);
+  font-weight: bold;
   line-height: var(--line-height-title);
   margin-top: 0;
 }
@@ -11,6 +11,7 @@
 .h1 {
   font-family: var(--font-title);
   font-size: 1.666rem;
+  font-weight: normal;
 
   @media (--device-tablet-tall),
          (--device-tablet-wide) {
@@ -31,19 +32,14 @@
   @media (--device-mobile-tall),
          (--device-mobile-wide) {
     font-size: var(--font-size-4);
-    font-weight: bold;
   }
   @media (--device-tablet-tall),
          (--device-tablet-wide),
          (--device-laptop) {
     font-size: var(--font-size-3);
-    font-weight: normal;
   }
 }
 .h3 {
-  font-family: var(--font-copy);
-  font-weight: bold;
-
   @media (--device-mobile-tall),
          (--device-mobile-wide) {
     font-size: var(--font-size-5);

@@ -1,4 +1,9 @@
 import { graphql } from 'gatsby'
+import hljs from 'highlight.js/lib/highlight'
+import hlBash from 'highlight.js/lib/languages/bash'
+import hlCpp from 'highlight.js/lib/languages/cpp'
+import hlJavascript from 'highlight.js/lib/languages/javascript'
+import hlPython from 'highlight.js/lib/languages/python'
 import PropTypes from 'prop-types'
 import React from 'react'
 import RehypeReact from 'rehype-react'
@@ -21,11 +26,9 @@ import TableCell from '../components/tableCell'
 import TableHeading from '../components/tableHeading'
 import TableRow from '../components/tableRow'
 
-import 'prismjs/themes/prism-solarizedlight.css'
 
-
-/* eslint-disable react/display-name, react/prop-types */
 // to convert markdown html => react components
+/* eslint-disable react/display-name, react/prop-types */
 const createHeading = (props, level) => {
   return React.createElement(Heading, {...props, level}, props.children)
 }
@@ -56,6 +59,12 @@ const renderAst = new RehypeReact({
   }
 }).Compiler
 /* eslint-enable react/display-name, react/prop-types */
+
+// markdown code highlighting
+hljs.registerLanguage('bash', hlBash);
+hljs.registerLanguage('cpp', hlCpp);
+hljs.registerLanguage('javascript', hlJavascript);
+hljs.registerLanguage('python', hlPython);
 
 // template metadata query
 export const pageQuery = graphql`

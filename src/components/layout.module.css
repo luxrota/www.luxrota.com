@@ -8,6 +8,7 @@
 
 :global :root {
   background-color: var(--color-site-white);
+  font-size: 15px;
 }
 
 
