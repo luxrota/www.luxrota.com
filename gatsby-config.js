@@ -49,6 +49,10 @@ module.exports = {
       options: {
         fonts: [
           {
+            family: 'Cinzel',
+            variants: ['400'],
+          },
+          {
             family: 'Lustria',
             variants: ['400'],
           },

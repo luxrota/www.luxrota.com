@@ -2,20 +2,24 @@
  * Variables
  */
 :root {
-  --color-site-white: #fff;
+  /* colors */
+  --color-black:  #000;
+  --color-grey:   #999;
+  --color-white:  #fff;
 
   /* type font (font-family) */
   --font-copy:  'Quattrocento Sans', sans-serif;
   --font-title: Lustria, serif;
 
   /* type scale (font-size) */
-  --font-size-1: 2.5rem;
-  --font-size-2: 2rem;
-  --font-size-3: 1.5rem;
-  --font-size-4: 1.25rem;
+  --font-size-1: 2.4rem;
+  --font-size-2: 1.8rem;
+  --font-size-3: 1.4rem;
+  --font-size-4: 1.2rem;
   --font-size-5: 1rem;
-  --font-size-6: 0.875rem;
-  --font-size-7: 0.7rem;
+  --font-size-6: 0.9rem;
+  --font-size-7: 0.8rem;
+  --font-size-8: 0.7rem;
 
   /* type line height (line-height) */
   --line-height-solid: 1;
@@ -26,6 +30,10 @@
   --measure-narrow: 20em;  /* ~45 chars */
   --measure:        30em;  /* ~66 chars */
   --measure-wide:   34em;  /* ~80 chars */
+
+  /* paragraph text spacing (margin-bottom) */
+  --paragraph-height-solid: 1rem;
+  --paragraph-height-copy:  1.333rem;
 }
 
 /**

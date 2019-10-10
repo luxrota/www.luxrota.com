@@ -1,5 +1,4 @@
 import { graphql, StaticQuery } from 'gatsby'
-import { Location } from '@reach/router' 
 import PropTypes from 'prop-types'
 import React from 'react'
 
@@ -22,27 +21,17 @@ const query = graphql`{
 /**
  * Layout
  */
-const Layout = ({children, date, readtime, title}) => (
+const Layout = (props) => (
   <StaticQuery
     query={query}
     render={(data) => (
       <div className={styles.layout}>
         <div className={styles.header}>
-          <Header heading={title} />
-          <Location>
-            {({location}) => {
-              if (location.pathname != '/') {
-                return (<div>
-                  {date}<br />
-                  {readtime}
-                </div>)
-              }
-            }}
-          </Location>
+          <Header {...props} />
         </div>
         <div className={styles.content}>
           <main className={styles.main}>
-            {children}
+            {props.children}
           </main>
           <div className={styles.footer}>
             <Footer siteTitle={data.site.siteMetadata.title} />

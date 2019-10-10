@@ -6,9 +6,18 @@
  * Global Styles
  */
 
-:global :root {
-  background-color: var(--color-site-white);
-  font-size: 15px;
+:global {
+  :root {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    font-size: 15px;
+  }
+
+  p:first-child:first-letter {
+    color: #903;
+    font-family: Cinzel, serif;
+    font-size: 4rem;
+  }
 }
 
 
@@ -64,15 +73,10 @@
     width: 49rem;
   }
   @media (--device-laptop) {
-    hyphens: auto;
     margin-left: inherit;
     margin-right: inherit;
-    overflow-wrap: break-word;
     /* text-align: right; */
     width: 14rem;
-    word-break: break-word;
-    word-spacing: 100vw; /* force wrap every word */
-    word-wrap: break-word;
   }
   @media (--device-desktop-wide) {
     width: 15.5rem;

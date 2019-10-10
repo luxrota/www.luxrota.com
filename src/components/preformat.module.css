@@ -2,6 +2,7 @@
 
 
 .preformat {
-  font-size: var(--font-size-6) !important;
+  font-size: calc((var(--font-size-6) + var(--font-size-7)) / 2) !important;
+  margin-bottom: var(--paragraph-height-copy);
   max-width: var(--measure-wide);
 }

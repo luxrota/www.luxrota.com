@@ -2,8 +2,9 @@
 
 
 .paragraph {
-  margin-top: 0;
-  padding: 0;
   line-height: var(--line-height-copy);
+  margin-bottom: var(--paragraph-height-copy);
+  margin-top: 0;
   max-width: var(--measure-wide);
+  padding: 0;
 }

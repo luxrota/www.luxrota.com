@@ -2,51 +2,121 @@
 
 
 .heading {
-  font-family: var(--font-copy);
+  font-family: var(--font-title);
   font-weight: bold;
   line-height: var(--line-height-title);
-  margin-top: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .h1 {
-  font-family: var(--font-title);
-  font-size: 1.666rem;
+  font-size: calc((var(--font-size-3) + var(--font-size-2)) / 2);
   font-weight: normal;
+  margin-bottom: 1rem;
 
   @media (--device-tablet-tall),
          (--device-tablet-wide) {
-    font-size: 1.777rem;
+    font-size: var(--font-size-2);
   }
-  @media (--device-laptop),
-         (--device-desktop) {
-    font-size: 2.222rem;
+  @media (--device-laptop) {
+    font-size: calc((var(--font-size-2) + var(--font-size-1)) / 2);
+    hyphens: auto;
+    margin-bottom: 2rem;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    word-spacing: 100vw; /* force wrap every word */
+    word-wrap: break-word;
+  }
+  @media (--device-desktop) {
+    font-size: calc((var(--font-size-2) + var(--font-size-1)) / 2);
   }
   @media (--device-desktop-full),
          (--device-desktop-wide) {
-    font-size: 2.444rem;
+    font-size: var(--font-size-1);
   }
 }
 .h2 {
-  font-family: var(--font-title);
+  font-size: calc((var(--font-size-4) + var(--font-size-3)) / 2);
+  margin-bottom: 1.333rem;
 
-  @media (--device-mobile-tall),
-         (--device-mobile-wide) {
-    font-size: var(--font-size-4);
-  }
   @media (--device-tablet-tall),
-         (--device-tablet-wide),
-         (--device-laptop) {
+         (--device-tablet-wide) {
     font-size: var(--font-size-3);
+  }
+  @media (--device-laptop),
+         (--device-desktop) {
+    font-size: calc((var(--font-size-3) + var(--font-size-2)) / 2);
+  }
+  @media (--device-desktop-full),
+         (--device-desktop-wide) {
+    font-size: var(--font-size-2);
   }
 }
 .h3 {
-  @media (--device-mobile-tall),
-         (--device-mobile-wide) {
+  font-size: calc((var(--font-size-5) + var(--font-size-4)) / 2);
+  margin-bottom: 0.666rem;
+
+  @media (--device-tablet-tall),
+         (--device-tablet-wide) {
+    font-size: var(--font-size-4);
+  }
+  @media (--device-laptop),
+         (--device-desktop) {
+    font-size: calc((var(--font-size-4) + var(--font-size-3)) / 2);
+  }
+  @media (--device-desktop-full),
+         (--device-desktop-wide) {
+    font-size: var(--font-size-3);
+  }
+}
+.h4 {
+  font-size: calc((var(--font-size-6) + var(--font-size-5)) / 2);
+  margin-bottom: 0.6rem;
+
+  @media (--device-tablet-tall),
+         (--device-tablet-wide) {
     font-size: var(--font-size-5);
   }
-  @media (--device-tablet-tall),
-         (--device-tablet-wide),
-         (--device-laptop) {
+  @media (--device-laptop),
+         (--device-desktop) {
+    font-size: calc((var(--font-size-5) + var(--font-size-4)) / 2);
+  }
+  @media (--device-desktop-full),
+         (--device-desktop-wide) {
     font-size: var(--font-size-4);
+  }
+}
+.h5 {
+  font-size: calc((var(--font-size-7) + var(--font-size-6)) / 2);
+  margin-bottom: 0.5rem;
+
+  @media (--device-tablet-tall),
+         (--device-tablet-wide) {
+    font-size: var(--font-size-6);
+  }
+  @media (--device-laptop),
+         (--device-desktop) {
+    font-size: calc((var(--font-size-6) + var(--font-size-5)) / 2);
+  }
+  @media (--device-desktop-full),
+         (--device-desktop-wide) {
+    font-size: var(--font-size-5);
+  }
+}
+.h6 {
+  font-size: calc((var(--font-size-8) + var(--font-size-7)) / 2);
+  margin-bottom: 0.5rem;
+
+  @media (--device-tablet-tall),
+         (--device-tablet-wide) {
+    font-size: var(--font-size-7);
+  }
+  @media (--device-laptop),
+         (--device-desktop) {
+    font-size: calc((var(--font-size-7) + var(--font-size-6)) / 2);
+  }
+  @media (--device-desktop-full),
+         (--device-desktop-wide) {
+    font-size: var(--font-size-6);
   }
 }

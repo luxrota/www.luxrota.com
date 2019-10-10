@@ -1,7 +1,7 @@
 ---
 date: "2019-04-23"
 title: "SimHash Document Encoder"
-image: "image.png"
+image: "simhash-document-encoder.svg"
 keywords: "simhash, document, encoder"
 ---
 
@@ -9,33 +9,32 @@ keywords: "simhash, document, encoder"
 
 ::: article
 
-The **SimHash Document Encoder** is [now live][encoder-cpp] in
-[HTM.core][htm-core] as C++ with Python bindings. It provides simple and
-immediate encoding of text for use with [Hierarchical Temporal Memory][htm]
-(HTM). This may be of interest to Natural Language Processing (NLP), Search,
-or HTM engineers.
+The **SimHash Document Encoder** is now live in [HTM.core][htm-core] as C++
+with Python bindings. It provides simple and immediate encoding of text for use
+with [Hierarchical Temporal Memory][htm] (HTM). This may be of interest to
+Natural Language Processing (NLP), Search, or HTM engineers.
 
 The SimHash Document Encoder converts text-based documents into
 [Sparse Distributed Representations][sdr] (SDR), ready for use with HTM.
 Similar documents will result in similar encodings, while dissimilar documents
 will have differing encodings. "Similarity" here refers to *bitwise*
-similarity (small hamming distance, high overlap), not *semantic*
-similarity (encodings for "apple" and "computer" will have no relation here).
+similarity (small hamming distance, high overlap), not *semantic* similarity
+(encodings for "apple" and "computer" will have no relation here).
 :::
 
 ::: aside
-![mcimage](image.png)
+![Abstract Text Artwork](simhash-document-encoder.svg)
 :::
 
 :::
 
 ## Usage
 
-Install [HTM.core][htm-core] before trying the examples below.
+[Install HTM.core][htm-core] before trying the examples below.
 
-A wide selection of helpful parameters can be passed to the encoder, setting
-options regarding token case sensitivity, vocabulary and weightings,
-exclusions, orphan handling, frequency ceiling/flooring, and character
+A wide selection of helpful parameters can be passed to the encoder, including
+options for setting token case sensitivity, vocabulary and weightings,
+exclusions, frequency ceiling/flooring, orphan handling, and character
 similarity sensitivity. The [documentation in the header file][encoder-cpp]
 has more details.
 
@@ -112,6 +111,13 @@ python
 
 ## Learn More
 
+### HTM.core
+
+[HTM.core][htm-core] is the active [HTM Community][htm-community] fork of
+[Numenta][numenta]'s hibernating [NuPIC][nupic] HTM codebase. Thanks again to
+@breznak, @dmac, and @dkeeney from the team for their help and support, they've
+got a beautiful codebase going, and are wonderful to work with.
+
 ### SimHash
 
 [SimHash][simhash] is a [Locality-Sensitive Hashing][lsh] (LSH) algorithm from
@@ -121,16 +127,9 @@ GoogleBot Web Crawler to find near-duplicate web pages.
 We provide an [encoder-specific README][encoder-readme] file for an in-depth
 tour of the SimHash algorithm.
 
-### HTM.core
-
-[HTM.core][htm-core] is the active [HTM Community][htm-community] fork of
-[Numenta][numenta]'s hibernating [NuPIC][nupic] HTM codebase. Thanks again to
-@breznak, @dmac, and @dkeeney from the team for their help and support, they've
-got a beautiful codebase going, and are wonderful to work with.
-
 ### Semantic Similarity
 
-For encodings that support *semantic* similarity (encodings for
+For encodings that *do* support *semantic* similarity (encodings for
 "apple" and "computer" will relate), [Cortical.io][cortical-io] offers their
 highly recommended Semantic Folding technology.
 

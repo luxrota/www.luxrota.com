@@ -1,24 +1,14 @@
+@import '_variables.css';
+
+
 .header {
-  /* composes: bgLightGray from 'tachyons'; */
-  /* composes: fixed from 'tachyons';
-  composes: flex from 'tachyons';
-  composes: itemsCenter from 'tachyons';
-  composes: justifyBetween from 'tachyons';
-  composes: o90 from 'tachyons';
-  composes: ph3 from 'tachyons';
-  composes: ph4Ns from 'tachyons';
-  composes: pv2 from 'tachyons';
-  composes: pv3Ns from 'tachyons';
-  composes: top0 from 'tachyons'; */
-  /* composes: w100 from 'tachyons'; */
+  /* a */
 }
 
-.heading {
-  /* composes: measureWideL from 'tachyons'; */
-  /* composes: measureM from 'tachyons'; */
-  /* composes: measureNarrow from 'tachyons'; */
-  /* composes: white from 'tachyons'; */
-}
-.heading h1 {
-  /* margin: 0; */
+.subheader {
+  color: var(--color-grey);
+  font-size: var(--font-size-7);
+  line-height: 2;
+  margin-bottom: 1rem;
+  max-width: var(--measure-wide);
 }
