@@ -11,4 +11,14 @@
   line-height: 2;
   margin-bottom: 1rem;
   max-width: var(--measure-wide);
+
+  > div {
+    display: inline;
+    margin-right: 1.5rem;
+
+    @media (--device-laptop) {
+      display: block;
+      margin: 0;
+    }
+  }
 }

@@ -11,13 +11,6 @@
   width: 100%;
 }
 
-/* legal */
-.legal {
-  color: var(--color-grey);
-  font-size: var(--font-size-8);
-  margin-top: 0.222rem;
-}
-
 /* brand */
 .brand {
   color: black;
@@ -27,19 +20,25 @@
 .link {
   color: var(--color-white);
   text-decoration: none;
+
+  img {
+    width: 12rem;
+
+    @media (--device-tablet-tall) {
+      width: 13rem;
+    }
+    @media (--device-laptop) {
+      width: 14rem;
+    }
+    @media (--device-desktop-wide) {
+      width: 15rem;
+    }
+  }
 }
 
-/* logo */
-.logo {
-  width: 10rem;
-
-  @media (--device-tablet-tall) {
-    width: 11rem;
-  }
-  @media (--device-laptop) {
-    width: 12rem;
-  }
-  @media (--device-desktop-wide) {
-    width: 14rem;
-  }
+/* legal */
+.legal {
+  color: var(--color-grey);
+  font-size: var(--font-size-8);
+  margin-top: 0.222rem;
 }

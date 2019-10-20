@@ -26,7 +26,7 @@ import TableCell from '../components/tableCell'
 import TableHeading from '../components/tableHeading'
 import TableRow from '../components/tableRow'
 
-import 'highlight.js/styles/mono-blue.css'
+import 'highlight.js/styles/default.css'
 
 
 // to convert markdown html => react components

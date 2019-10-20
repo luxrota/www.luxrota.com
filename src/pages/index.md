@@ -5,21 +5,21 @@ keywords: "home, machine, intelligence, applications"
 ---
 
 ::: section
-
 ::: article
-Apps with human-level intelligence.
-Lux Rota grows Machine Intelligence Applications.
 
-Eu nulla consectetur pariatur incididunt sunt do qui irure. Nulla consequat
-dolore aute tempor consectetur. Laborum ex ad consectetur pariatur adipisicing
-consectetur quis anim amet et id consequat ea nulla. Dolore duis veniam ipsum
-mollit non pariatur id.
+Lux Rota raises applications with human-like intelligence. Our fresh
+neuro-technology is inspired by the architecture of the neocortex in the human
+brain. Our semantic applications self-learn on sequences of streaming
+time-series data.
 
-[SimHash Document Encoder](/simhash-document-encoder)
+## Projects
+
+* [SimHash Document Encoder](/simhash-document-encoder)
+
 :::
-
 ::: aside
-![Machine Intelligence Theme Image](machine-intelligence-applications.svg)
-:::
 
+![Machine Intelligence Theme Image](machine-intelligence-applications.svg)
+
+:::
 :::

@@ -7,4 +7,15 @@
   margin-top: 0;
   max-width: var(--measure-wide);
   padding: 0;
+
+  /* first paragraph dropcaps */
+  &:first-child:first-letter {
+    color: var(--color-red);
+    float: left;
+    font-family: Cinzel, serif;
+    font-size: 525%;
+    margin: 0;
+    margin-top: 0.4rem;
+    padding: 0 0.5rem 0 0;
+  }
 }

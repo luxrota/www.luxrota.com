@@ -1,3 +1,6 @@
+@import '_variables.css';
+
+
 .logo {
-  color: black;
+  filter: var(--filter-red);
 }

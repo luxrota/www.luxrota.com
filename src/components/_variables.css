@@ -4,8 +4,12 @@
 :root {
   /* colors */
   --color-black:  #000;
-  --color-grey:   #999;
+  --color-grey:   #888;
+  --color-red:    #d31;
   --color-white:  #fff;
+
+  /* color filters (filter) */
+  --filter-red: invert(22%) sepia(95%) saturate(2567%) hue-rotate(358deg) brightness(91%) contrast(91%);
 
   /* type font (font-family) */
   --font-copy:  'Quattrocento Sans', sans-serif;

@@ -1,5 +1,5 @@
 ---
-date: "2019-04-23"
+date: "2019-10-20"
 title: "SimHash Document Encoder"
 image: "simhash-document-encoder.svg"
 keywords: "simhash, document, encoder"
@@ -9,9 +9,9 @@ keywords: "simhash, document, encoder"
 
 ::: article
 
-The **SimHash Document Encoder** is now live in [HTM.core][htm-core] as C++
-with Python bindings. It provides simple and immediate encoding of text for use
-with [Hierarchical Temporal Memory][htm] (HTM). This may be of interest to
+The SimHash Document Encoder is now live in [HTM.core][htm-core] as C++
+with Python bindings. It provides the simple and immediate encoding of text for
+use with [Hierarchical Temporal Memory][htm] (HTM). This may be of interest to
 Natural Language Processing (NLP), Search, or HTM engineers.
 
 The SimHash Document Encoder converts text-based documents into

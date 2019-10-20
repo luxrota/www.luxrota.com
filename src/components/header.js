@@ -1,9 +1,9 @@
 import { globalHistory } from '@reach/router'
-import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
 
 import Heading from './heading'
+import Link from './link'
 import styles from './header.module.css'
 
 
@@ -17,7 +17,7 @@ const Header = ({date, readtime, title}) => {
         <div>{date}</div>
         <div>{readtime}</div>
         <div>
-          <Link to="/">Home</Link> &gt;
+          <Link href="/">Home</Link> &gt;
         </div>
       </div>
     )

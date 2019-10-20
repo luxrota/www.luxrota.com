@@ -1,3 +1,13 @@
+@import '_variables.css';
+
+
 .link {
-  background: none;
+  color: var(--color-red);
+
+  &:link {
+    color: var(--color-red);
+  }
+  &:visited {
+    color: #993333;
+  }
 }

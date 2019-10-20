@@ -21,8 +21,8 @@
     width: 25em;
   }
 
-  & > img {
-    filter: saturate(0);
+  img {
+    filter: var(--filter-red);
     padding-top: 0.333rem;
   }
 }

@@ -2,16 +2,17 @@
 
 
 .heading {
+  color: var(--color-grey);
   font-family: var(--font-title);
-  font-weight: bold;
+  font-weight: normal;
   line-height: var(--line-height-title);
   margin: 0;
   padding: 0;
 }
 
 .h1 {
+  color: var(--color-red);
   font-size: calc((var(--font-size-3) + var(--font-size-2)) / 2);
-  font-weight: normal;
   margin-bottom: 1rem;
 
   @media (--device-tablet-tall),

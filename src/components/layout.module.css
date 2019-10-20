@@ -6,18 +6,10 @@
  * Global Styles
  */
 
-:global {
-  :root {
-    background-color: var(--color-white);
-    color: var(--color-black);
-    font-size: 15px;
-  }
-
-  p:first-child:first-letter {
-    color: #903;
-    font-family: Cinzel, serif;
-    font-size: 4rem;
-  }
+:global :root {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  font-size: 15px;
 }
 
 
@@ -75,7 +67,6 @@
   @media (--device-laptop) {
     margin-left: inherit;
     margin-right: inherit;
-    /* text-align: right; */
     width: 14rem;
   }
   @media (--device-desktop-wide) {
