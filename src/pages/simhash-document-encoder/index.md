@@ -137,12 +137,6 @@ thanks!
 
 ([permalink][lvx-simhash-document])
 
-*[HTM]: Hierarchical Temporal Memory
-*[LSH]: Locality-Sensitive Hashing
-*[NLP]: Natural Language Processing
-*[NuPIC]: Numenta Platform for Intelligent Computing
-*[SDR]: Sparse Distributed Representation
-
 [cortical-io]: https://cortical.io
 [encoder-cpp]: https://github.com/htm-community/htm.core/blob/master/src/htm/encoders/SimHashDocumentEncoder.hpp
 [encoder-cpp-test]: https://github.com/htm-community/htm.core/blob/master/src/test/unit/encoders/SimHashDocumentEncoderTest.cpp

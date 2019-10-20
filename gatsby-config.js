@@ -84,7 +84,6 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
-          'gatsby-remark-abbr',
           'gatsby-remark-check-links',
           'gatsby-remark-containers',
           'gatsby-remark-copy-images',

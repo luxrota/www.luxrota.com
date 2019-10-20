@@ -26,7 +26,6 @@
     "gatsby-plugin-remove-trailing-slashes": "^2.1.4",
     "gatsby-plugin-sharp": "^2.2.18",
     "gatsby-remark-a11y-emoji": "^1.0.1",
-    "gatsby-remark-abbr": "^1.0.0",
     "gatsby-remark-check-links": "^2.0.4",
     "gatsby-remark-containers": "^1.0.0",
     "gatsby-remark-copy-images": "^0.2.1",

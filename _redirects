@@ -1,12 +1,11 @@
 # Netlify Redirects
-
 # *** Warning! Your custom domain is not using HTTPS yet ***
 # These rules will change if you change your site’s custom domains or HTTPS settings
 
 # Redirect default Netlify subdomain to primary domain
 http://www-luxrota-com.netlify.com/* http://www.luxrota.com/:splat 301!
 
-# stage1 => stage2
+# Oct 2019, Stage1 => Stage2
 /articles / 301
 /articles/2019/04/18/simhash-distributed-scalar-encoder-for-htm.html /simhash-document-encoder 301
 /articles/2019/04/23/simhash-distributed-document-encoder-for-htm.html /simhash-document-encoder 301
