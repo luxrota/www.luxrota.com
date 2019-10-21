@@ -6,39 +6,41 @@ keywords: "simhash, document, encoder"
 ---
 
 ::: section
-
 ::: article
 
-The SimHash Document Encoder is now live in [HTM.core][htm-core] as C++
-with Python bindings. It provides the simple and immediate encoding of text for
-use with [Hierarchical Temporal Memory][htm] (HTM). This may be of interest to
-Natural Language Processing (NLP), Search, or HTM engineers.
+The [SimHash Document Encoder][encoder-cpp] is now live in [HTM.core][htm-core]
+as C++ with Python bindings. It provides the simple and immediate encoding of
+text for use with [Hierarchical Temporal Memory][htm] (HTM), a machine
+intelligence framework. This may be of interest to Natural Language
+Processing (NLP), Search, or HTM engineers.
 
 The SimHash Document Encoder converts text-based documents into
-[Sparse Distributed Representations][sdr] (SDR), ready for use with HTM.
-Similar documents will result in similar encodings, while dissimilar documents
-will have differing encodings. "Similarity" here refers to *bitwise*
-similarity (small hamming distance, high overlap), not *semantic* similarity
-(encodings for "apple" and "computer" will have no relation here).
-:::
+[Sparse Distributed Representations][sdr] (SDR), "the brain's data structure,"
+ready for use with HTM. Similar documents will result in similar encodings,
+while dissimilar documents will have differing encodings. "Similarity" here
+refers to *bitwise* similarity (small hamming distance, high overlap), not
+*semantic* similarity (encodings for "apple" and "computer" will have no
+relation here).
 
+:::
 ::: aside
-![Abstract Text Artwork](simhash-document-encoder.svg)
-:::
 
+![Abstract Text Artwork](simhash-document-encoder.svg)
+
+:::
 :::
 
 ## Usage
 
-[Install HTM.core][htm-core] before trying the examples below.
-
 A wide selection of helpful parameters can be passed to the encoder, including
-options for setting token case sensitivity, vocabulary and weightings,
+options for setting token case sensitivity, vocabulary, weightings,
 exclusions, frequency ceiling/flooring, orphan handling, and character
 similarity sensitivity. The [documentation in the header file][encoder-cpp]
 has more details.
 
 ### C++
+
+The following is a usage example in C++:
 
 ```cpp
 #include <htm/encoders/types/Sdr.hpp>
@@ -59,6 +61,8 @@ The [C++ Unit Tests][encoder-cpp-test] provide more usage examples.
 
 ### Python
 
+The following is a usage example in Python:
+
 ```python
 from htm.bindings.encoders import \
   SimHashDocumentEncoder,
@@ -78,9 +82,9 @@ The [Python Unit Tests][encoder-py-test] provide more usage information.
 
 #### Python Example Runner
 
-This will generate many random documents, and find the most/least similar.
-Also, it will generate a chart of the entire encoding space. Parameter help
-and usage is provided.
+An example of the encoder in action is provided in Python. It will generate
+many random documents, and find the most/least similar. It will also generate a
+visual chart of encoding space usage.
 
 For help getting started:
 
@@ -101,7 +105,8 @@ python \
 
 #### Python Module Help
 
-This provides helpful documentation on encoder parameters and usage.
+Helpful documentation on encoder parameters and usage is available in Python
+module form:
 
 ```bash
 python
@@ -115,8 +120,7 @@ python
 
 [HTM.core][htm-core] is the active [HTM Community][htm-community] fork of
 [Numenta][numenta]'s hibernating [NuPIC][nupic] HTM codebase. Thanks again to
-@breznak, @dmac, and @dkeeney from the team for their help and support, they've
-got a beautiful codebase going, and are wonderful to work with.
+the team for their help and support, they've got a beautiful codebase, and are wonderful to work with.
 
 ### SimHash
 
@@ -131,14 +135,10 @@ tour of the SimHash algorithm.
 
 For encodings that *do* support *semantic* similarity (encodings for
 "apple" and "computer" will relate), [Cortical.io][cortical-io] offers their
-highly recommended Semantic Folding technology.
-
-thanks!
-
-([permalink][lvx-simhash-document])
+highly-recommended Semantic Folding technology.
 
 [cortical-io]: https://cortical.io
-[encoder-cpp]: https://github.com/htm-community/htm.core/blob/master/src/htm/encoders/SimHashDocumentEncoder.hpp
+[encoder-cpp]: https://github.com/htm-community/htm.core/blob/master/src/htm/encoders/SimHashDocumentEncoder.hpp#L140
 [encoder-cpp-test]: https://github.com/htm-community/htm.core/blob/master/src/test/unit/encoders/SimHashDocumentEncoderTest.cpp
 [encoder-readme]: https://github.com/htm-community/htm.core/blob/master/src/htm/encoders/SimHashDocumentEncoder.README.md
 [encoder-py]: https://github.com/htm-community/htm.core/blob/master/bindings/py/cpp_src/bindings/encoders/py_SimHashDocumentEncoder.cpp

@@ -13,9 +13,11 @@
     color: var(--color-red);
     float: left;
     font-family: Cinzel, serif;
-    font-size: 525%;
+    font-size: 5.25rem;
+    line-height: 3.1rem; /* chrome */
     margin: 0;
     margin-top: 0.4rem;
-    padding: 0 0.5rem 0 0;
+    padding: 0;
+    padding-right: 0.63rem;
   }
 }

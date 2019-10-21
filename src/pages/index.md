@@ -9,8 +9,8 @@ keywords: "home, machine, intelligence, applications"
 
 Lux Rota raises applications with human-like intelligence. Our fresh
 neuro-technology is inspired by the architecture of the neocortex in the human
-brain. Our semantic applications self-learn on sequences of streaming
-time-series data.
+brain. Our semantic applications self-learn patterns from time-based data
+streams.
 
 ## Projects
 
