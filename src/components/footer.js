@@ -2,7 +2,7 @@ import {Link} from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
 
-import Logo from './Logo'
+import Logo from './logo'
 import styles from './footer.module.css'
 
 const year = new Date().getFullYear()
