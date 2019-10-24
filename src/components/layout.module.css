@@ -10,6 +10,33 @@
   background-color: var(--color-white);
   color: var(--color-black);
   font-size: 15px;
+
+  /* hide visually but still allow screen readers */
+  .invisible {
+    position: absolute;
+    top: auto;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    width: 1px;
+    height: 1px;
+    white-space: nowrap;
+  }
+
+  /* first paragraph dropcaps (remark-dropcap) */
+  p:first-child .dropcap {
+    color: var(--color-red);
+    float: left;
+    font-family: Cinzel, serif;
+    font-size: 5.25rem;
+    line-height: 3.5rem;
+    margin: 0.2rem 0 0 0;
+    padding: 0 0.555rem 0 0;
+
+    /* hack safari */
+    &:not(:root:root) {
+      margin-top: 0.666rem;
+    }
+  }
 }
 
 

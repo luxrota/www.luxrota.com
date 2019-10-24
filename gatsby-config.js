@@ -87,6 +87,7 @@ module.exports = {
           'gatsby-remark-check-links',
           'gatsby-remark-containers',
           'gatsby-remark-copy-images',
+          'gatsby-remark-dropcap',
           'gatsby-remark-emoji-unicode',
           'gatsby-remark-heading-slug',
           'gatsby-remark-graphviz',

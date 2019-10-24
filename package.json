@@ -1,7 +1,7 @@
 {
-  "version": "0.0.1",
+  "version": "0.2.1",
   "name": "www.luxrota.com",
-  "description": "Lux Rota - Company Website Source",
+  "description": "Lux Rota Company Website Source",
   "private": true,
   "author": "Brev Patterson <brev.patterson@luxrota.com>",
   "browserslist": [
@@ -11,7 +11,6 @@
     "url": "https://github.com/luxrota/www.luxrota.com/issues"
   },
   "dependencies": {
-    "@playlyfe/gql": "^2.6.2",
     "autoprefixer": "^9.6.1",
     "classnames": "^2.2.6",
     "gatsby": "^2.14.0",
@@ -29,6 +28,7 @@
     "gatsby-remark-check-links": "^2.0.4",
     "gatsby-remark-containers": "^1.0.0",
     "gatsby-remark-copy-images": "^0.2.1",
+    "gatsby-remark-dropcap": "^0.1.2",
     "gatsby-remark-emoji-unicode": "^0.1.0",
     "gatsby-remark-graphviz": "^1.1.7",
     "gatsby-remark-heading-slug": "^0.2.0",
@@ -40,7 +40,6 @@
     "gatsby-source-filesystem": "^2.1.18",
     "gatsby-transformer-remark": "^2.6.19",
     "gatsby-transformer-sharp": "^2.2.12",
-    "graphql": "^14.5.3",
     "highlightjs": "^9.12.0",
     "postcss-at2x": "^4.0.3",
     "postcss-css-variables": "^0.13.0",
